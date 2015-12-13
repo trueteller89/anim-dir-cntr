@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+<link rel="stylesheet" href="style.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-animate.min.js"></script>
+<script src="script.js"></script>
+<script src="LeftController.js"></script>
+<script src="RightController.js"></script>
+</head>
+<body>
+
+<switcher ng-switch="wave" ng-animate="'wave'" ng-init="wave='one'">
+<div ng-controller="leftController" ng-switch-when="one" class="animate-switch">
+<p>LEFT</p>
+<button ng-click="moveDir(0)">next</button>
+<div>
+    <h1>random numbers left</h1>
+   <ul>
+       <li  ng-repeat="randNum in arRandom">{{randNum}}</li>
+       </ul>
+</div>
+    </div>
+
+<div ng-controller="rightController" ng-switch-when="two" class="animate-switch">
+<p>RIGHT</p>
+<button ng-click="moveDir(1)">prev</button>
+<div>
+    <h1>random numbers right</h1>
+   <ul>
+       <li  ng-repeat="randNum in arRandom">{{randNum}}</li>
+       </ul>
+</div>
+    </div> 
+      </switcher>
+</body>
+</html>
