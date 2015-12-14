@@ -11,7 +11,7 @@
 <body>
 
 <switcher ng-switch="wave" ng-animate="'wave'" ng-init="wave='one'">
-<div ng-controller="leftController" ng-switch-when="one" class="animate-switch">
+<div ng-controller="leftController" ng-switch-when="one" class="animate-switch wrapper leftan">
 <p>LEFT</p>
 <button ng-click="moveDir(0)">next</button>
 <div>
@@ -22,7 +22,7 @@
 </div>
     </div>
 
-<div ng-controller="rightController" ng-switch-when="two" class="animate-switch">
+<div ng-controller="rightController" ng-switch-when="two" class="animate-switch wrapper rightan">
 <p>RIGHT</p>
 <button ng-click="moveDir(1)">prev</button>
 <div>

@@ -1,23 +1,58 @@
-.animate-switch.ng-animate {
-  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-
-
+.wrapper {
+  margin-left:500px;
 }
-
+.leftan.ng-animate {
+    transition:all cubic-bezier(0.250, 0.250, 0.750, 0.750) 0.5s;
+} 
+.rightan.ng-animate {
+    transition:all cubic-bezier(0.250, 0.250, 0.750, 0.750) 0.5s;
+}
+/*
 .animate-switch.ng-leave.ng-leave-active{  
   left:-100%;
-  
 }
 .animate-switch.ng-enter {
-   position:absolute;
+  position:absolute;
   left:100%;
 }
 .animate-switch.ng-leave{   
   position:absolute;
   left:0;}
 .animate-switch.ng-enter.ng-enter-active {
+  left:0;
+}
+*/
+.rightan.ng-leave.ng-leave-active{  
+   visibility:hidden;
+}
+.rightan.ng-enter {
+   visibility:visible;
+
+  position:absolute;
+  left:100%;
+}
+.rightan.ng-leave{  
+ visibility:hidden; 
+  position:absolute;
+  left:-100%;}
+.rightan.ng-enter.ng-enter-active {
+   visibility:visible;
+  left:0;
+}
+
+.leftan.ng-leave.ng-leave-active{  
+   visibility:hidden;
+}
+.leftan.ng-enter {
+   visibility:visible;
+  position:absolute;
+  left:-100%;
+}
+.leftan.ng-leave{  
+ visibility:hidden; 
+  position:absolute;
+  left:100%;}
+.leftan.ng-enter.ng-enter-active {
+   visibility:visible;
   left:0;
 }
